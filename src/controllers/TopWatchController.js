@@ -5,14 +5,16 @@ const router = express.Router()
 router.get("", async(req, res) => {
     try{
 
-        const page = req.query.page;
+        // const page = req.query.page;
 
-        const pagesize = req.query.pagesize
+        // const pagesize = req.query.pagesize
 
-        const skip = (page -1) * pagesize
+        // const skip = (page -1) * pagesize
 
 
-        const product = await Product.find().skip(skip).limit(pagesize).lean().exec();
+        const product = await Product.find().lean().exec();
+        // .skip(skip).limit(pagesize)
+       
   
         return res.status(200).send(product);
     }
