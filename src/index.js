@@ -19,9 +19,9 @@ const app = express()
  
 app.use("/topwatch", TopWatch)
 
-if(process.env.NODE_ENV == "production"){
-    app.use(express.static("Boat-LifeStyle/build"))
-}
+// if(process.env.NODE_ENV == "production"){
+//     app.use(express.static("Boat-LifeStyle/build"))
+// }
  
 
 module.exports = app
