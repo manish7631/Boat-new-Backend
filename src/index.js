@@ -3,6 +3,8 @@ const express = require("express")
 
 const TopWatch = require("./controllers/TopWatchController")
 
+const TopPick = require("./controllers/TopPicksController")
+
  
 
 const app = express()
@@ -18,10 +20,8 @@ const app = express()
 
  
 app.use("/topwatch", TopWatch)
+app.use("/toppick", TopPick)
 
-// if(process.env.NODE_ENV == "production"){
-//     app.use(express.static("Boat-LifeStyle/build"))
-// }
  
 
 module.exports = app
