@@ -19,6 +19,8 @@ const Actor = require("./controllers/ActorController")
 
 const About = require("./controllers/AboutController")
 
+const AllProduct = require("./controllers/AllProductController")
+
  
 
 const app = express()
@@ -42,6 +44,7 @@ app.use("/gaming", Gaming)
 app.use("/blog", Blog)
 app.use("/actor", Actor)
 app.use("/about", About)
+app.use("/allproduct", AllProduct)
 
  
 
