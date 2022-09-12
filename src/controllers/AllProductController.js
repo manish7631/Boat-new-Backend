@@ -12,7 +12,7 @@ router.get("", async(req, res) => {
         const skip = (page -1) * pagesize
 
 
-        const product = await Product.find().skip(skip).limit(pagesize).lean().exec();
+        const product = await Product.find().lean().exec();
   
         return res.status(200).send(product);
     }
